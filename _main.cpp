@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
     fs::recursive_directory_iterator it{fs::current_path().c_str()};
     for (const auto& entry : it) {
         if (entry.is_directory()) continue;
+        if (entry.path().filename().string().substr(0, 1) == ".") continue;
         if (entry.path().filename().string().substr(0, 1) == "_") continue;
         std::string ext = entry.path().extension().string();
         switch (valid_ext(ext)) {
