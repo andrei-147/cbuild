@@ -1,0 +1,12 @@
+[
+  {
+    "directory": "/home/andrei/projects/devel/cpp/ezcompile/examples/helloworld",
+    "command": "g++ g++ /home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/src/header.cpp /home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/src/main.cpp -I/home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/include -o exec -g -Wall -Wextra -fsanitize=address -O0 -std=c++23",
+    "file": "/home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/src/header.cpp"
+  },
+  {
+    "directory": "/home/andrei/projects/devel/cpp/ezcompile/examples/helloworld",
+    "command": "g++ g++ /home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/src/header.cpp /home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/src/main.cpp -I/home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/include -o exec -g -Wall -Wextra -fsanitize=address -O0 -std=c++23",
+    "file": "/home/andrei/projects/devel/cpp/ezcompile/examples/helloworld/src/main.cpp"
+  }
+]
