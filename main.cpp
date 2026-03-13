@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
     std::string release_flags = "-s -flto -DNDEBUG -O2";
     std::string standard = "-std=";
     if (argc == 4) standard += argv[3];
+    else standard += "c++17";
     std::string output_name = "exec";
     fs::remove(fs::current_path() / output_name);
     std::vector<std::string> src_files = {};
@@ -78,7 +79,7 @@ int main(int argc, char *argv[]) {
     if (imode) {
         final_command += ' ' + debug_flags;
     } else final_command += ' ' + release_flags;
-    if (argc == 4) final_command += ' ' + standard;
+    final_command += ' ' + standard;
 
     std::ofstream json("compile_commands.json");
     json << "[\n";
