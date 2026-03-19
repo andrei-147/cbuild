@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/andrei/projects/devel/cpp/ezcompile/examples/sdl",
+    "command": "g++ g++ /home/andrei/projects/devel/cpp/ezcompile/examples/sdl/src/main.cpp -o exec -g -Wall -Wextra -fsanitize=address -O0 -std=c++23 -lSDL3",
+    "file": "/home/andrei/projects/devel/cpp/ezcompile/examples/sdl/src/main.cpp"
+  }
+]
