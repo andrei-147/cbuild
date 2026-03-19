@@ -12,10 +12,10 @@ A minimalist C/C++ project management tool that favors **convention over configu
 ## ✨ Features
 
 * **Zero Config:** No `.json`, `.toml`, or `Makefile` required.
-* **Auto-Inclusion:** Automatically detects header directories.
-* **Recursive Discovery:** Finds source files in nested subdirectories.
-* **Exclusion Rules:** Automatically ignores "hidden" files or private folders starting with `.` or `_`.
-* **Compiler Flexibility:** Defaults to `g++` but supports any compiler passed as an argument.
+* **Auto-Inclusion:** Automatically detects header and library directories.
+* **Recursive Discovery:** Finds files in nested subdirectories.
+* **Exclusion Rules:** Automatically ignores hidden files/folders starting with `.` or `_`.
+* **Flexibility:** Has many flags that can be used to customize to the user's preference.
 
 ## 📋 File Handling Rules
 
@@ -23,6 +23,7 @@ A minimalist C/C++ project management tool that favors **convention over configu
 | --- | --- | --- |
 | **Sources** | `file.cpp`, `file.c` | Added to compilation list. |
 | **Headers** | `file.h`, `file.hpp` | Parent directory added to include paths (`-I`). |
+| **Libraries** | `libtest.so`, `libtest.a` | Parent directory added to library paths (`-L`). |
 | **Ignored** | `_filename`, `.filename` | Completely skipped by the scanner. |
 
 ---
@@ -31,18 +32,15 @@ A minimalist C/C++ project management tool that favors **convention over configu
 
 ### Basic Build
 
-By default, `cbuild` generates an executable named `exec`.
-
 ```bash
 # Basic debug build using g++
-./cbuild debug
+./cbuild -Bdebug
 
 # Specify a different compiler (e.g., clang++)
-./cbuild release clang++
+./cbuild -Brelease -Cclang++
 
 # Specify the C / C++ standard
-./cbuild release g++ c++23
-
+./cbuild -Brelease -Cg++ -Sc++23
 ```
 
 ### Flags
